@@ -7,14 +7,24 @@ public class Main {
 
         List <Pais>listPaises = new ArrayList();
 
-        Pais Brasil = new Pais("ISO 3166-1", "Brasil", 193946886, 8515767.049);
+        Pais brasil = new Pais("ISO 3166-1", "Brasil", 193946886, 8515767.049);
+        Pais paraguai = new Pais("ISO 3166-2", "Paraguai", 6862000, 406752);
 
-        listPaises.add(Brasil);
-        
+        brasil.addVizinho(paraguai);
+
+        for(Pais pais: brasil.getVizinhos()){
+
+        }
+
+        /*listPaises.add(Brasil);
 
         for(int i=0; i<listPaises.size(); i++){
             System.out.println("Densidade do pais, "+listPaises.get(i).getNome()+"\tDensidade:"+listPaises.get(i).getDensidade());
         }
+
+        for(Pais pais: listPaises){
+            System.out.println("Densidade do "+pais.getNome()+"é"+pais.getDensidade());
+        }*/
 
     }
 }
