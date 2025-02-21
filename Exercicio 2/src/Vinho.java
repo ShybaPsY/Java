@@ -35,7 +35,7 @@ public class Vinho {
 	}
 
 	public long getIdadeDias() {
-		return LocalDate.now().until(dtProd, ChronoUnit.DAYS);
+		return dtProd.until(LocalDate.now(), ChronoUnit.DAYS);
 	}
 
 	public String getTipo() {
