@@ -1,4 +1,4 @@
-public class Funcionario {
+public class Funcionario extends Colaborador {
     private int ctps;
     private String nome;
     protected double vlrHora;
@@ -10,8 +10,8 @@ public class Funcionario {
     }
 
     public Funcionario(int ctps, String nome, double vlrHora, int nhTrab) {
+        super(nome);
         this.ctps = ctps;
-        this.nome = nome;
         this.vlrHora = vlrHora;
         this.nhTrab = nhTrab;
     }
@@ -22,14 +22,6 @@ public class Funcionario {
 
     public void setCtps(int ctps) {
         this.ctps = ctps;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public double getVlrHora() {
@@ -52,8 +44,5 @@ public class Funcionario {
     {
         return nhTrab*vlrHora;
     }
-    @Override
-    public String toString(){
-        return nome;
-    }
+
 }

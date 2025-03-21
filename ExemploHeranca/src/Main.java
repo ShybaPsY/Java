@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        Funcionario[] equipe = new Funcionario[10];
+        Colaborador[] equipe = new Colaborador[10];
         int tl=0;
 
         Funcionario f1=new Funcionario(123,"Vanderglayson Silva",40,40);
@@ -13,12 +13,13 @@ public class Main {
         equipe[tl++] = g;
         equipe[tl++] = s;
         equipe[tl++] = new Funcionario(877,"Kerolyne Veiga",40,20);
+        equipe[tl++] = new Estagiario(125484, "Estyve");
 
         for (int i = 0; i < tl; i++) {
             mostraFuncionario(equipe[i]);
         }
     }
-    static void mostraFuncionario(Funcionario f){
+    static void mostraFuncionario(Colaborador f){
         System.out.println("* "+f.getNome()+" Ganha R$ "+String.format("%.2f",f.getSalario())+" *");
         if(f instanceof Gerente){
             System.out.println("       Adicional de "+((Gerente)f).getAdicional()+"%");
